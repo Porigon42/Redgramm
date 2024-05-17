@@ -1,8 +1,6 @@
-JavaScript
-
 let post = document.getElementById("post1"); 
 let postsBox = document.getElementById("allposts") 
- 
+let li = 0;
 let imgurls = [ 
     "https://sh1rroo.github.io/biosite/myselfphoto.png", 
     "https://sh1rroo.github.io/biosite/yalegenda.jfif", 
@@ -16,4 +14,3 @@ for(let i = 0; i < 100; i++){
  
     postsBox.appendChild(newpost); 
 }
-let a = 0;
