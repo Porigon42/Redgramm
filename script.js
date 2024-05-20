@@ -14,3 +14,50 @@ for(let i = 0; i < 100; i++){
  
     postsBox.appendChild(newpost); 
 }
+
+let likeCount = 0;
+        let dislikeCount = 0;
+        let likeActive = false;
+        let dislikeActive = false;
+        function toggleLike() {
+            if (likeActive) {
+                return;
+            }
+
+            if (dislikeActive) {
+                dislikeCount--;
+                document.getElementById('dislikeCount').innerText = dislikeCount;
+                dislikeActive = false;
+            }
+
+            likeCount++;
+            document.getElementById('likeCount').innerText = likeCount;
+            likeActive = true;
+        }
+
+        function toggleDislike() {
+            if (dislikeActive) {
+                return;
+            }
+
+            if (likeActive) {
+                likeCount--;
+                document.getElementById('likeCount').innerText = likeCount;
+                likeActive = false;
+            }
+
+            dislikeCount++;
+            document.getElementById('dislikeCount').innerText = dislikeCount;
+            dislikeActive = true;
+        }
+
+function addComment(event) {
+    event.preventDefault(); 
+    const form = event.target;
+    const commentText = form.comment.value;
+    const newComment = document.createElement('div');
+    newComment.classList.add('comment');
+    newComment.innerHTML = `<p>${commentText}</p><small>Posted just now</small>`;
+    document.querySelector('.comments-list').appendChild(newComment);
+    form.comment.value = '';
+}

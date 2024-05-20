@@ -95,6 +95,7 @@ input{
 .like{
     width: 50px;
     height: 30px; 
+    cursor: pointer;
     border-radius: 100%;
     
 }
@@ -102,5 +103,37 @@ input{
     width: 50px;
     height: 30px; 
     border-radius: 100%;
+    cursor: pointer;
     transform: rotate(180deg)
+}
+.comments-section {
+    margin-top: 20px;
+}
+
+.comment-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.comment-form textarea {
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 96%;
+    height: 80px;
+    resize: vertical;
+}
+
+.comment {
+    margin: 10px 0;
+    padding: 10px;
+    border-top: 1px solid #eee;
+}
+
+.comment small {
+    color: #555;
+}
+.reaction-buttons {
+    display: flex;
+    gap: 10px;
+    align-items: center;
 }

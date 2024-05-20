@@ -28,13 +28,27 @@
                     <img class="postImg" src="https://sh1rroo.github.io/biosite/yalegenda.jfif"> 
                 </div> 
                 <div class="likesBox"> 
-                    <img class = "like"src="like.png"> 
-                        <b>Likes: </b>
-                        <img class = "dislike"src="like.png"> 
-                        <b>Dislikes: </b>
+                    <div class="reaction-buttons">
+                        <div>
+                            <img class = "like" src="like.png" alt="Like" id="likeButton" onclick="toggleLike()">
+                            <span id="likeCount">0</span>
+                        </div>
+                        <div>
+                            <img class = "dislike" src="like.png" alt="Dislike" id="dislikeButton" onclick="toggleDislike()">
+                            <span id="dislikeCount">0</span>
+                        </div>
+                    </div>
                     </div>
                 <div class="postText">Lol</div> 
-                    <input type="" placeholder="leave comment"  name="">
+                <div class="comments-section">
+                    <h3>Comments</h3>
+                    <form class="comment-form" onsubmit="addComment(event)">
+                        <textarea name="comment" placeholder="Write a comment..." required></textarea>
+                        <button type="submit">Submit</button>
+                    </form>
+                    <div class="comments-list">
+                    </div>
+                </div>
             </div> 
         </div> 
     </section> 
